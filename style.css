@@ -36,19 +36,29 @@ a:hover{
 .content {
     flex: 1; 
    text-align: center;
+   font-size: 20px;
 }
 
 
 
 
+.profile {
+    text-align: center; 
+    padding: 16px; 
+}
 
 
-
-
-
-
-
-
+.profile-pic {
+        width: 60px; 
+        height: 60px; 
+        border-radius: 50%; 
+        margin-bottom: 8px; 
+}
+    
+.nickname {
+        display: block; 
+        color: #000; 
+    }
 
 
 ul {
@@ -57,13 +67,14 @@ ul {
     margin: 0;
     padding: 0;
     width: 200px;
-    background-color: #f1f1f1;
+    background-color: rgba(12, 12, 12, 0.459);
     position: fixed; 
     top: 0;        
     left: 0;        
     z-index: 1000;  
     height: 100%;
     border-right: #000 1px solid;
+    backdrop-filter: blur(5px);
 }
 
 li {
@@ -98,4 +109,5 @@ li:last-child {
     text-align: center;
     top: 0;
     padding: 10px;
+    font-size: 10px;
 }
