@@ -1,18 +1,17 @@
 body{
-    background-color: #F2F2F2;
+    background-color: #333333;
     font-family: font;
     display: flex;
     height: 100vh;
     flex-direction: column;
     overflow: hidden;
+    color: white;
 }
-
 
 @font-face {
     font-family: font;
     src: url(/font/LTSuperior-Medium.otf);
 }
-
 
 h1{
     text-align: center;
@@ -20,22 +19,12 @@ h1{
     justify-content: center;
 }
 
-
 h2{
     text-align: center;
     align-content: center;
     justify-content: center;
 }
 
-
-a{
-    text-decoration: none;
-    color: #688392; 
-}
-
-a:hover{
-    text-decoration:underline;
-}
 
 .content {
     flex: 1; 
@@ -52,13 +41,22 @@ a:hover{
 }
 
 
+.content a{
+    padding: 10px;
+    text-decoration: none;
+    color: #688392;
+    display: inline-block;
+}
+
+.content a:hover{
+    text-decoration: underline;
+}
 
 
 .profile {
     text-align: center; 
     padding: 16px; 
 }
-
 
 .profile-pic {
         width: 60px; 
@@ -69,51 +67,38 @@ a:hover{
     
 .nickname {
         display: block; 
-        color: #000; 
-    }
+}
 
 
 ul {
-    border-left: #000 1px solid;
+    border-left: rgb(34, 34, 34) 1px solid;
     list-style-type: none;
     margin: 0;
     padding: 0;
     width: 200px;
-    background-color: rgba(12, 12, 12, 0.459);
+    background-color: rgb(34, 34, 34);
     position: fixed; 
     top: 0;        
     left: 0;        
     z-index: 1000;  
     height: 100%;
-    border-right: #000 1px solid;
-    backdrop-filter: blur(5px);
-}
-
-li {
-    border-bottom: #000 1px solid;
+    border-right: rgb(34, 34, 34) 1px solid;
 }
 
 li a {
     display: block;
-    color: #000;
     padding: 8px 16px;
     text-decoration: none;
-}
-
-li a.active {
-    background-color: #04AA6D;
     color: white;
 }
 
-li a:hover:not(.active) {
-    background-color: #688392;
-    color: white;
+li:hover:not(.profile) { 
+    background-color: #688392; 
 }
 
 li:last-child {
     border-bottom: none;
 }
-
 
 
 
