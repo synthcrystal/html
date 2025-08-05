@@ -20,15 +20,23 @@
         <li><a href="https://ko-fi.com/darealmxd">support me</a></li>
       </ul>
 <div class="content">
-      <h1>what is reverse engineering?</h1>
-      <p>Reverse engineering is the process of deducing how a device, system, or software works by analyzing its components and functionality, often with little prior knowledge. It can aid in repurposing outdated technology, conducting security analysis, and enhancing understanding of how something operates.</p>
-      <h2>why did i choose it?</h2>
-      <p>idk, i thought its fun</p>
-      <h3>why am i writing this blog?</h3>
-      <p>it started as school project, i just felt like doing something bigger out of it</p>
+      <h1>who am i?</h1>
+      <p>i'm a computer science highschool student, currently in 4th grade</p>
+      <h2>what do i like</h2>
+      <p>im mostly into repairing/refurbrishing old tech, i like technical stuff</p>
+      <h3>what is going to be posted on the blog?</h3>
+      <p>i'll be posting basically anything that comes to my mind, from simple repairs to some dev board projects</p>
 </div>
-<div class="footer">
-   <p>(ill try to update this website as often as i can)</p>
-</div>
+<button id="toggleMenu">☰</button>
 </body>
+<script>
+const toggleButton = document.getElementById('toggleMenu');
+const sidebar = document.querySelector('ul');
+
+toggleButton.addEventListener('click', () => {
+  sidebar.classList.toggle('show');             
+  document.body.classList.toggle('sidebar-visible'); 
+});
+
+</script>
 </html>

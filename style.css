@@ -87,11 +87,12 @@ ul {
     height: 100%;
     border-right: rgb(34, 34, 34) 1px solid;
     overflow-y: auto;
-    transition: transform 0.3s ease;
+    transition: margin-left 0.3s ease;
 }
 
 ul.show {
     display: block;
+    transition: margin-left 0.3s ease;
 }
 
 li a {
@@ -129,6 +130,7 @@ li:last-child {
     cursor: pointer;
     font-size: 16px;
     border-radius: 4px;
+    transition: margin-left 0.3s ease;
 }
 
 #toggleMenu:hover {
