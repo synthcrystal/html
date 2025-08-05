@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>mxd does stuff</title>
+    <link rel="shortcut icon" href="/icon/images.jpg" type="image/x-icon">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>   
+    <ul>
+        <li class="profile">
+            <img src="/icon/images.jpg" alt="Profile Picture" class="profile-pic">
+            <span class="nickname">mxd</span>
+        </li>
+        <li><a href="/index.html">home</a></li>
+        <li><a href="/start/start.html">introduction</a></li>
+        <li><a href="/post1/psp.html">you're here</a></li>
+        <li><a href="/post2/psp2.html">small fuck up</a></li>
+        <li><a href="https://ko-fi.com/darealmxd">support me</a></li>
+      </ul>
+<div class="content">
+      <h1>i've recently picked up PSP E1004 from local 2nd hand online store for around 75eur</h1>
+      <p>the screen was scratched a little (picture below)</p>
+      
+      <p>i've put ARK-4 cfw on it, tutorial is<a href="https://www.consolemods.org/wiki/PSP:Installing_ARK-4_CFW">here</a>and ordered a PSP 1000 glass cover<a href="https://www.aliexpress.com/item/1005007076704413.html">link</a></p>
+      <p>i finally installed the glass lens (used 2 sided tape because its smaller than the e1004 model)</p>
+      <p>left: before, right: after</p>
+
+      <img src="./img/screen.png" alt="screen before replacement" width="300" height="200">
+      <img src="./img/screen1.png" alt="screen after replacement" width="300" height="200">
+      <p>i got purple buttons and joystick on order, waiting for it to be delivered</p>
+</div>
+<button id="toggleMenu">☰</button>
+</body>
+<script>
+const toggleButton = document.getElementById('toggleMenu');
+const sidebar = document.querySelector('ul');
+
+toggleButton.addEventListener('click', () => {
+  sidebar.classList.toggle('show');             
+  document.body.classList.toggle('sidebar-visible'); 
+});
+
+
+document.querySelectorAll('.content img').forEach(img => {
+  img.style.cursor = 'zoom-in';
+  img.addEventListener('click', function() {
+    const popupBg = document.createElement('div');
+    popupBg.className = 'img-popup-bg';
+    const popupImg = document.createElement('img');
+    popupImg.src = img.src;
+    popupBg.appendChild(popupImg);
+    popupBg.onclick = () => popupBg.remove();
+    document.body.appendChild(popupBg);
+  });
+});
+</script>
+</html>

@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>mxd does stuff</title>
+    <link rel="shortcut icon" href="/icon/images.jpg" type="image/x-icon">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>   
+    <ul>
+        <li class="profile">
+            <img src="/icon/images.jpg" alt="Profile Picture" class="profile-pic">
+            <span class="nickname">mxd</span>
+        </li>
+        <li><a href="/index.html">home</a></li>
+        <li><a href="/start/start.html">introduction</a></li>
+        <li><a href="/post1/psp.html">"customizing" my psp e1004 part 1</a></li>
+        <li><a href="/post2/psp2.html">you're here</a></li>
+        <li><a href="https://ko-fi.com/darealmxd">support me</a></li>
+      </ul>
+<div class="content">
+      <h1>decided to try to repair the joystick and fucked up</h1>
+      <p>disassembling the PSP was easy, but i had some struggle with the joystick ribbon</p>      
+      <p>ofc something had to go wrong and the ribbon got stuck in the connector (image below (source ifixit))</p>
+      <img src="/post2/img/connector.png" alt="">
+      <p>i do not have a picture of the broken stick but basically the ribbon snapped</p>
+      <p>ordered new stick from <a href="https://www.aliexpress.com/item/1005006194855709.html">here</a></p>
+      <p>ill post the fix when ill get the order</p>
+</div>
+<button id="toggleMenu">☰</button>
+</body>
+<script>
+const toggleButton = document.getElementById('toggleMenu');
+const sidebar = document.querySelector('ul');
+
+toggleButton.addEventListener('click', () => {
+  sidebar.classList.toggle('show');             
+  document.body.classList.toggle('sidebar-visible'); 
+});
+
+
+document.querySelectorAll('.content img').forEach(img => {
+  img.style.cursor = 'zoom-in';
+  img.addEventListener('click', function() {
+    const popupBg = document.createElement('div');
+    popupBg.className = 'img-popup-bg';
+    const popupImg = document.createElement('img');
+    popupImg.src = img.src;
+    popupBg.appendChild(popupImg);
+    popupBg.onclick = () => popupBg.remove();
+    document.body.appendChild(popupBg);
+  });
+});
+</script>
+</html>

@@ -1,0 +1,158 @@
+body {
+    background-color: #333333;
+    font-family: font;
+    display: flex;
+    height: 100vh;
+    flex-direction: column;
+    overflow: hidden;
+    color: white;
+    margin: 0;
+}
+
+@font-face {
+    font-family: font;
+    src: url(../font/LTSuperior-Medium.otf);
+}
+
+h1 {
+    text-align: center;
+    align-content: center;
+    justify-content: center;
+    margin: 0;
+    padding: 20px 0;
+}
+
+.content {
+    flex: 1;
+    text-align: center;
+    font-size: 20px;
+    margin-left: 0;
+    transition: margin-left 0.3s ease;
+    padding: 20px;;
+}
+
+ 
+body.sidebar-visible .content {
+    margin-left: 200px; 
+}
+
+.content a {
+    padding: 10px;
+    text-decoration: none;
+    color: #688392;
+    display: inline-block;
+}
+
+.content a:hover {
+    text-decoration: underline;
+}
+
+.profile {
+    text-align: center;
+    padding: 16px;
+}
+
+.profile-pic {
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    margin-bottom: 8px;
+}
+
+.profile a {
+    text-decoration: none;
+    color: #688392;
+}
+
+.profile a:hover {
+    text-decoration: underline;
+}
+
+.nickname {
+    display: block;
+}
+
+ul {
+    display: none; 
+    border-left: rgb(34, 34, 34) 1px solid;
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    width: 200px;
+    background-color: rgb(34, 34, 34);
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 1000;
+    height: 100%;
+    border-right: rgb(34, 34, 34) 1px solid;
+    overflow-y: auto;
+    transition: margin-left 0.3s ease;
+}
+
+ul.show {
+    display: block;
+    transition: margin-left 0.3s ease;
+}
+
+li a {
+    display: block;
+    padding: 8px 16px;
+    text-decoration: none;
+    color: white;
+}
+
+li:hover:not(.profile) {
+    background-color: #688392;
+}
+
+li:last-child {
+    border-bottom: none;
+}
+
+.footer {
+    text-align: center;
+    top: 0;
+    padding: 10px;
+    font-size: 10px;
+}
+
+
+#toggleMenu {
+    position: fixed;
+    top: 10px;
+    left: 10px;
+    z-index: 1100;
+    background-color: #688392;
+    color: white;
+    border: none;
+    padding: 8px 12px;
+    cursor: pointer;
+    font-size: 16px;
+    border-radius: 4px;
+    transition: margin-left 0.3s ease;
+}
+
+#toggleMenu:hover {
+    background-color: #55707a;
+}
+
+
+.img-popup-bg {
+  position: fixed;
+  top: 0; left: 0; right: 0; bottom: 0;
+  background: rgba(0,0,0,0.8);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 2000;
+}
+.img-popup-bg img {
+  max-width: 95vw;
+  max-height: 95vh;
+  box-shadow: 0 0 16px #000;
+  border-radius: 8px;
+}
+.img-popup-bg {
+  cursor: zoom-out;
+}
