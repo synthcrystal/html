@@ -8,7 +8,7 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <h1>welcome to my blog!</h1>
+
     <ul>
         <li class="profile">
             <img src="./icon/images.jpg" alt="Profile Picture" class="profile-pic">
@@ -21,16 +21,29 @@
         <li><a href="https://ko-fi.com/darealmxd">support me</a></li>
       </ul>
 <div class="content">
+        <h1>welcome to my blog!</h1>
       <p>im mxd</p>
       <p>this blog is about my reverse engineering learning process and also some silly stuff i do</p>
       <p>if you want to contact me, here are all my socials</p>
       <a href="https://www.instagram.com/darealmxd/">instagram</a> <br>
-      <a href="<https://discord.com/users/1130942093313978458>">discord</a> <br>
+      <a href="https://discord.com/users/1130942093313978458">discord</a> <br>
       <a href="https://github.com/synthcrystal">github</a>
 </div>
 
+<button id="toggleMenu">☰</button>
 <div class="footer">
    <p>(ill try to update this website as often as i can)</p>
 </div>
 </body>
+<script>
+const toggleButton = document.getElementById('toggleMenu');
+const sidebar = document.querySelector('ul');
+
+toggleButton.addEventListener('click', () => {
+  sidebar.classList.toggle('show');             
+  document.body.classList.toggle('sidebar-visible'); 
+});
+
+</script>
+
 </html>
